@@ -8,7 +8,7 @@ const Items = () => {
             .then(result => setItems(result));
     }, []);
     return (
-        <div>
+        <div className="container my-5">
             {
                 items.map(item => <Item
                     key={item?._id}
