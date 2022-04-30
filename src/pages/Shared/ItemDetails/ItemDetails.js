@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import axios from "axios";
 import { toast, ToastContainer } from 'react-toastify';
 const ItemDetails = () => {
@@ -30,15 +30,19 @@ const ItemDetails = () => {
         }
     }
     return (
+
         <div className="container my-5">
+            <Link style={{ textDecoration: "none" }} className='d-flex justify-content-end align-items-center' to="/manageitems"><button className='btn btn-danger'>Manage All</button></Link>
             <h2 className='text-center fw-bold'>Item Details</h2>
             <div className="border border-3 text-center p-2 rounded-3">
-                <img width={250} height={250} src={item.img} alt="" />
-                <h4>Name: {item.name}</h4>
-                <p>Price: {item.price}</p>
-                <p>Description: {item.description}</p>
-                <p>Quantity: {item.quantity}</p>
-                <p>Supplier: {item.supplier}</p>
+                <img className='rounded-3' width={250} height={250} src={item.img} alt="" />
+                <div className='my-3'>
+                    <h4 className='fw-bold'>Name: {item.name}</h4>
+                    <p>Price: {item.price}</p>
+                    <p>Description: {item.description}</p>
+                    <p>Quantity: {item.quantity}</p>
+                    <p>Supplier: {item.supplier}</p>
+                </div>
                 <form onSubmit={handleToSubmit}>
                     <input type="number" name="quantity" id="" placeholder='Enter quantity' />
                     <input className='btn btn-success ms-2' type="submit" value="Add Quantity" />
