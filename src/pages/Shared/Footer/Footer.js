@@ -3,7 +3,7 @@ import React from 'react';
 const Footer = () => {
     return (
         <div>
-            <h1>Footer</h1>
+            <p className="text-center fw-bold"><small>&copy; {new Date().getFullYear()} Laptop City.</small></p>
         </div>
     );
 };
