@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import { Bar, BarChart, CartesianGrid, Legend, Pie, PieChart, Tooltip, XAxis, YAxis } from 'recharts';
+import { Bar, BarChart, CartesianGrid, Legend, Pie, PieChart, Tooltip, XAxis } from 'recharts';
 import useItems from '../../hooks/useItems';
-
+import "./Chart.css";
 const Chart1 = () => {
     const [items] = useItems();
     return (
@@ -12,24 +11,27 @@ const Chart1 = () => {
 
                 <div>
                     <h3>Available Quantity in Stock: </h3>
-                    <PieChart width={500} height={300}>
-                        <Pie
-                            dataKey="quantity"
-                            isAnimationActive={false}
-                            data={items}
-                            cx="50%"
-                            cy="50%"
-                            outerRadius={80}
-                            fill="#8884d8"
-                            label
-                        />
-                        <Tooltip />
-                    </PieChart>
+                    <div className="chart">
+                        <PieChart width={250} height={300}>
+                            <Pie
+                                dataKey="quantity"
+                                isAnimationActive={false}
+                                data={items}
+                                cx="50%"
+                                cy="50%"
+                                outerRadius={80}
+                                fill="#8884d8"
+                                label
+                            />
+                            <Tooltip />
+                        </PieChart>
+                    </div>
                 </div>
                 <div>
                     <h3>Price Range by Product:</h3>
                     <BarChart
-                        width={500}
+                        className='chart'
+                        width={250}
                         height={300}
                         data={items}
                         margin={{
@@ -38,13 +40,13 @@ const Chart1 = () => {
                             left: 20,
                             bottom: 5,
                         }}
+                        barSize={20}
                     >
-                        <CartesianGrid strokeDasharray="3 3" />
-                        <XAxis dataKey="name" />
-                        <YAxis />
+                        <XAxis dataKey="name" scale="point" padding={{ left: 10, right: 10 }} />
                         <Tooltip />
                         <Legend />
-                        <Bar dataKey="price" fill="#8884d8" />
+                        <CartesianGrid strokeDasharray="3 3" />
+                        <Bar dataKey="price" fill="#8884d8" background={{ fill: '#eee' }} />
                     </BarChart>
                 </div>
             </div>
