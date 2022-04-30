@@ -1,13 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Bar, BarChart, CartesianGrid, Legend, Pie, PieChart, Tooltip, XAxis, YAxis } from 'recharts';
+import useItems from '../../hooks/useItems';
 
 const Chart1 = () => {
-    const [items, setItems] = useState([]);
-    useEffect(() => {
-        fetch("items.json")
-            .then(res => res.json())
-            .then(result => setItems(result));
-    }, []);
+    const [items] = useItems();
     return (
         <div className='container'>
             <h3 className='fw-bold mb-3'>Products information through charts:</h3>

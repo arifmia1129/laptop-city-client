@@ -1,12 +1,8 @@
 import React, { useEffect, useState } from 'react';
+import useItems from '../../../hooks/useItems';
 import Item from '../Item/Item';
 const Items = () => {
-    const [items, setItems] = useState([]);
-    useEffect(() => {
-        fetch("items.json")
-            .then(res => res.json())
-            .then(result => setItems(result));
-    }, []);
+    const [items] = useItems();
     return (
         <div className="container my-5">
             <h3 className='mb-3 fw-bold'>Inventory Items Info : </h3>
