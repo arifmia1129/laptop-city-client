@@ -4,6 +4,7 @@ import Footer from './pages/Shared/Footer/Footer';
 import { Route, Routes } from 'react-router-dom';
 import Home from './pages/Home/Home/Home';
 import ItemDetails from './pages/Shared/ItemDetails/ItemDetails';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
