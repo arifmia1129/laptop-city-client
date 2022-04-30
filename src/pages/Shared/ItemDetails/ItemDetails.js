@@ -1,15 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-
+import axios from "axios";
 const ItemDetails = () => {
     const { id } = useParams();
     const [item, setItem] = useState({});
-    const [currentQuantiy, setCurrentQuantity] = useState(item.quantity);
     useEffect(() => {
         fetch(`http://localhost:5000/item/${id}`)
             .then(res => res.json())
             .then(data => setItem(data));
-    }, [id]);
+    }, [item]);
+    const handleQuantityDecrement = async () => {
+        const { data } = await axios.put(`http://localhost:5000/item/${id}`, { quantity: item.quantity - 1 })
+        console.log(data);
+    }
+
     return (
         <div className="container my-5">
             <h2 className='text-center fw-bold'>Item Details</h2>
@@ -20,11 +24,13 @@ const ItemDetails = () => {
                 <p>Description: {item.description}</p>
                 <p>Quantity: {item.quantity}</p>
                 <p>Supplier: {item.supplier}</p>
-                <input type="number" name="quantity" id="" placeholder='Enter quantity' />
-                <button className='btn btn-success ms-2'>Add Quantity</button>
+                <form onSubmit={handleToSubmit}>
+                    <input type="number" name="quantity" id="" placeholder='Enter quantity' />
+                    <input className='btn btn-success ms-2' type="submit" value="Add Quantity" />
+                </form>
                 <br />
                 <br />
-                <button className='btn btn-danger'>Delivered</button>
+                <button onClick={handleQuantityDecrement} className='btn btn-danger'>Delivered</button>
             </div>
             <div>
 
