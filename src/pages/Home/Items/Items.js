@@ -10,6 +10,7 @@ const Items = () => {
     return (
         <div className="container my-5">
             <h3 className='mb-3 fw-bold'>Inventory Items Info : </h3>
+            <hr />
             {
                 items.map(item => <Item
                     key={item?._id}
