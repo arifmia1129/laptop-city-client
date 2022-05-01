@@ -19,7 +19,7 @@ const AllDetails = () => {
                     <h1> {totalQuantity}</h1>
                 </div>
                 <div className='bg-danger text-white fw-bold p-5 rounded-3 text-center m-3'>
-                    <h3>Total Price</h3>
+                    <h3>Total Amount</h3>
                     <h1> {totalPrice}</h1>
                 </div>
 
