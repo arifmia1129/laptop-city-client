@@ -1,13 +1,43 @@
 import React from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { Link, useNavigate } from 'react-router-dom';
+import { toast, ToastContainer } from 'react-toastify';
+import auth from '../../firebase.init';
+import Loading from '../Shared/Loading/Loading';
 
 const Login = () => {
+    const navigate = useNavigate();
+
+    const [
+        signInWithEmailAndPassword,
+        user,
+        loading,
+        error,
+    ] = useSignInWithEmailAndPassword(auth);
+
+
+    if (error) {
+        return (
+            <div>
+                {toast(error.message)};
+            </div>
+        );
+    }
+
+    if (loading) {
+        return <Loading></Loading>
+    }
+    if (user) {
+        return navigate("/");
+    }
+
+
     const handleFormSubmit = e => {
         e.preventDefault();
-        const name = e.target.name.value;
         const email = e.target.email.value;
         const password = e.target.password.value;
+        signInWithEmailAndPassword(email, password);
     }
     return (
         <div className="p-3">
@@ -29,6 +59,7 @@ const Login = () => {
                 </Button>
                 <p className="text-center my-3">If you have not an account? <Link style={{ textDecoration: "none" }} to="/login">register now</Link></p>
             </Form>
+            <ToastContainer></ToastContainer>
         </div>
     );
 };
