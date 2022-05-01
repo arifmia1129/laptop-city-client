@@ -7,6 +7,8 @@ import ItemDetails from './pages/Shared/ItemDetails/ItemDetails';
 import 'react-toastify/dist/ReactToastify.css';
 import Register from './pages/Authentication/Register';
 import Login from './pages/Authentication/Login';
+import RequireAuth from './pages/Shared/RequireAuth/RequireAuth';
+import ManageItems from './pages/ManageItems/ManageItems';
 
 function App() {
   return (
@@ -15,7 +17,12 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home />}></Route>
-        <Route path="/item/:id" element={<ItemDetails />}></Route>
+        <Route path="/item/:id" element={
+          <RequireAuth>
+            <ItemDetails />
+          </RequireAuth>
+        }></Route>
+        <Route path="/manageitems" element={<ManageItems />}></Route>
         <Route path="/register" element={<Register />}></Route>
         <Route path="/login" element={<Login />}></Route>
       </Routes>
