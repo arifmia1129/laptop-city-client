@@ -5,6 +5,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import auth from '../../firebase.init';
 import Loading from '../Shared/Loading/Loading';
+import SocialLogin from './SocialLogin/SocialLogin';
 
 const Login = () => {
     const navigate = useNavigate();
@@ -58,6 +59,13 @@ const Login = () => {
                     Login
                 </Button>
                 <p className="text-center my-3">If you have not an account? <Link style={{ textDecoration: "none" }} to="/login">register now</Link></p>
+
+                <div className='d-flex justify-content-center align-items-center'>
+                    <div className='w-50  bg-secondary' style={{ height: "2px" }}></div>
+                    <div><p className='mx-2 mt-3'>OR</p></div>
+                    <div className='w-50 bg-secondary' style={{ height: "2px" }}></div>
+                </div>
+                <SocialLogin></SocialLogin>
             </Form>
             <ToastContainer></ToastContainer>
         </div>

@@ -80,6 +80,12 @@ const Register = () => {
                     Register
                 </Button>
                 <p className="text-center my-3">If you have already an account? <Link style={{ textDecoration: "none" }} to="/login">log in now</Link></p>
+
+                <div className='d-flex justify-content-center align-items-center'>
+                    <div className='w-50  bg-secondary' style={{ height: "2px" }}></div>
+                    <div><p className='mx-2 mt-3'>OR</p></div>
+                    <div className='w-50 bg-secondary' style={{ height: "2px" }}></div>
+                </div>
             </Form>
             <ToastContainer></ToastContainer>
         </div>
