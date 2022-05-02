@@ -59,7 +59,7 @@ const Login = () => {
                 <Button className='w-50 mx-auto d-block' variant="primary" type="submit">
                     Login
                 </Button>
-                <p className="text-center my-3">If you have not an account? <Link style={{ textDecoration: "none" }} to="/login">register now</Link></p>
+                <p className="text-center my-3">If you have not an account? <Link style={{ textDecoration: "none" }} to="/register">register now</Link></p>
 
                 <div className='d-flex justify-content-center align-items-center'>
                     <div className='w-50  bg-secondary' style={{ height: "2px" }}></div>
