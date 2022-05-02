@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import "./Register.css";
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import auth from "../../firebase.init";
@@ -22,6 +22,8 @@ const Register = () => {
     const [checkStatus, setCheckStatus] = useState(false);
 
     const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || "/";
     if (error) {
         return (
             <div>
@@ -40,7 +42,7 @@ const Register = () => {
                     toast("Successfully user created. And check your email for verify.")
                 };
                 {
-                    navigate("/")
+                    navigate(from, { replace: true })
                 }
             </div>
         );
