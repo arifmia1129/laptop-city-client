@@ -29,7 +29,7 @@ const SocialLogin = () => {
         <div>
             <button onClick={() => signInWithGoogle()} className='btn btn-outline-secondary text-center d-block mx-auto social-login'>
                 <div className='d-flex justify-content-center align-items-center mt-3'>
-                    <img className='me-3 mb-3' src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="" />
+                    <img style={{ borderRadius: "50%" }} className='me-3 mb-3 bg-white p-2 fw-bold' src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="" />
                     <p>Login With Google</p>
                 </div>
             </button>

@@ -43,9 +43,10 @@ const ItemDetails = () => {
                     <p>Quantity: {item.quantity}</p>
                     <p>Supplier: {item.supplier}</p>
                 </div>
-                <form onSubmit={handleToSubmit}>
+                <form onSubmit={handleToSubmit} className="w-75 mx-auto">
                     <input type="number" name="quantity" id="" placeholder='Enter quantity' />
-                    <input className='btn btn-success ms-2' type="submit" value="Add Quantity" />
+                    <br />
+                    <input className='btn btn-success' type="submit" value="Add Quantity" />
                 </form>
                 <br />
                 <br />
