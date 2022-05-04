@@ -4,6 +4,8 @@ import useItems from '../../hooks/useItems';
 import "./ManageItems.css";
 import axios from "axios";
 import { toast, ToastContainer } from 'react-toastify';
+import { TrashIcon } from '@heroicons/react/solid';
+
 
 const ManageItems = () => {
     const [items, setItems] = useItems();
@@ -54,7 +56,9 @@ const ManageItems = () => {
                         items.map(item => <tr key={item._id} >
                             <td></td>
                             <td>{item.name}</td>
-                            <td><button onClick={() => handleDelete(item._id)} className='btn btn-danger'>Delete</button></td>
+                            <td>
+                                <TrashIcon style={{ width: "50px" }} onClick={() => handleDelete(item._id)} className="btn btn-danger" />
+                            </td>
                         </tr>
                         )
                     }
