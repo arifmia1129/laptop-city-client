@@ -1,6 +1,5 @@
 [
     {
-        "_id": 1,
         "img": "https://i.ibb.co/nw8zf8v/laptop-1.jpg",
         "name": "HP Brand Laptop",
         "price": "115000",
@@ -9,7 +8,6 @@
         "supplier": "HP"
     },
     {
-        "_id": 2,
         "img": "https://i.ibb.co/grNvHm2/laptop-7.jpg",
         "name": "MacBook Brand Laptop",
         "price": "315000",
@@ -18,7 +16,6 @@
         "supplier": "Apple"
     },
     {
-        "_id": 3,
         "img": "https://i.ibb.co/f8wdGPk/laptop-3.jpg",
         "name": "Samsung Brand Laptop",
         "price": "215000",
@@ -27,7 +24,6 @@
         "supplier": "Samsung"
     },
     {
-        "_id": 4,
         "img": "https://i.ibb.co/GPgPdFG/laptop-5.jpg",
         "name": "Lenovo Brand Laptop",
         "price": "150000",
@@ -36,7 +32,6 @@
         "supplier": "Lenovo"
     },
     {
-        "_id": 5,
         "img": "https://i.ibb.co/tZwLGvg/laptop-9.jpg",
         "name": "Microsoft Brand Laptop",
         "price": "215000",
@@ -45,7 +40,6 @@
         "supplier": "Microsoft"
     },
     {
-        "_id": 6,
         "img": "https://i.ibb.co/YTsBMyn/laptop-10.jpg",
         "name": "Walton Brand Laptop",
         "price": "125000",

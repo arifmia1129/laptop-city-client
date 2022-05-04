@@ -45,7 +45,7 @@ const ManageItems = () => {
                 <thead>
                     <tr>
                         <th>#</th>
-                        <th>Product Name</th>
+                        <th>Product</th>
                         <th>Operation</th>
                     </tr>
                 </thead>

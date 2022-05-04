@@ -18,6 +18,7 @@ const Header = () => {
                             user ? <>
                                 <Nav.Link><CustomLink to="/manageitems">Manage-Items</CustomLink></Nav.Link>
                                 <Nav.Link><CustomLink to="/additem">Add-Item</CustomLink></Nav.Link>
+                                <Nav.Link><CustomLink to="/myitems">My-Items</CustomLink></Nav.Link>
                                 <Nav.Link onClick={() => signOut(auth)}>Sign-Out</Nav.Link></> : <Nav.Link><CustomLink to="/login">Login</CustomLink></Nav.Link>
                         }
 

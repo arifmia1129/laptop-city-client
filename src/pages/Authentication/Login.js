@@ -20,11 +20,7 @@ const Login = () => {
 
 
     if (error) {
-        return (
-            <div>
-                {toast(error.message)};
-            </div>
-        );
+        toast(error.message);
     }
 
     if (loading) {

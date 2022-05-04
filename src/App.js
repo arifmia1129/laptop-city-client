@@ -10,6 +10,7 @@ import Login from './pages/Authentication/Login';
 import RequireAuth from './pages/Shared/RequireAuth/RequireAuth';
 import ManageItems from './pages/ManageItems/ManageItems';
 import AddItem from './pages/AddItem/AddItem';
+import MyItems from './pages/MyItems/MyItems';
 
 function App() {
   return (
@@ -30,6 +31,10 @@ function App() {
         <Route path="/additem" element={
           <RequireAuth>
             <AddItem />
+          </RequireAuth>}></Route>
+        <Route path="/myitems" element={
+          <RequireAuth>
+            <MyItems />
           </RequireAuth>}></Route>
         <Route path="/register" element={<Register />}></Route>
         <Route path="/login" element={<Login />}></Route>
