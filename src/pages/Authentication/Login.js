@@ -6,6 +6,7 @@ import { toast, ToastContainer } from 'react-toastify';
 import auth from '../../firebase.init';
 import Loading from '../Shared/Loading/Loading';
 import SocialLogin from './SocialLogin/SocialLogin';
+import useToken from "../../hooks/useToken";
 
 const Login = () => {
     const navigate = useNavigate();
@@ -18,7 +19,7 @@ const Login = () => {
         error,
     ] = useSignInWithEmailAndPassword(auth);
 
-
+    const [token] = useToken(user);
     if (error) {
         toast(error.message);
     }

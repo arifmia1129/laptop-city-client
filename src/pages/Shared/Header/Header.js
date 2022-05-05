@@ -16,15 +16,13 @@ const Header = () => {
                     <Nav className='ms-auto'>
                         {
                             user ? <>
-                                <Nav.Link><CustomLink to="/manageitems">Manage-Items</CustomLink></Nav.Link>
-                                <Nav.Link><CustomLink to="/additem">Add-Item</CustomLink></Nav.Link>
-                                <Nav.Link><CustomLink to="/myitems">My-Items</CustomLink></Nav.Link>
-                                <Nav.Link onClick={() => signOut(auth)}>Sign-Out</Nav.Link></> : <Nav.Link><CustomLink to="/login">Login</CustomLink></Nav.Link>
+                                <Nav.Link href="#"><CustomLink to="/manageitems">Manage-Items</CustomLink></Nav.Link>
+                                <Nav.Link href="#"><CustomLink to="/additem">Add-Item</CustomLink></Nav.Link>
+                                <Nav.Link href="#"><CustomLink to="/myitems">My-Items</CustomLink></Nav.Link>
+                                <Nav.Link href="#" onClick={() => signOut(auth)}>Sign-Out</Nav.Link>
+                                <p className='text-white my-auto fw-bold border p-1 rounded'>{user?.displayName}</p>
+                            </> : <Nav.Link href="#"><CustomLink to="/login">Login</CustomLink></Nav.Link>
                         }
-
-                        <Nav.Link eventKey={2} href="#memes">
-                            Dank memes
-                        </Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>

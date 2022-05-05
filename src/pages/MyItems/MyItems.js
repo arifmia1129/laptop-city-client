@@ -1,16 +1,35 @@
+import { async } from '@firebase/util';
+import axios from 'axios';
+import { signOut } from 'firebase/auth';
 import React, { useEffect, useState } from 'react';
 import { Table } from 'react-bootstrap';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 
 const MyItems = () => {
     const [user] = useAuthState(auth);
     const [myItems, setMyItems] = useState([]);
-    console.log(user);
+    const navigate = useNavigate();
     useEffect(() => {
-        fetch(`http://localhost:5000/myitems?email=${user?.email}`)
-            .then(res => res.json())
-            .then(data => setMyItems(data));
+        const getItems = async () => {
+            try {
+                const { data } = await axios(`http://localhost:5000/myitems?email=${user?.email}`, {
+                    headers: {
+                        authorization: `Bearer: ${localStorage.getItem("token")}`
+                    }
+                })
+                setMyItems(data);
+            }
+            catch (error) {
+                if (error.response.status === 401 || error.response.status === 403) {
+                    signOut(auth);
+                    navigate("/login");
+                }
+            }
+        }
+
+        getItems();
     }, [user])
     return (
         <div className='container mx-auto d-block my-5'>
