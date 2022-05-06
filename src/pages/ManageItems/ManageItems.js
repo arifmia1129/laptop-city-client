@@ -5,7 +5,7 @@ import "./ManageItems.css";
 import axios from "axios";
 import { toast, ToastContainer } from 'react-toastify';
 import { TrashIcon } from '@heroicons/react/solid';
-
+import { Link } from "react-router-dom";
 
 const ManageItems = () => {
     const [items, setItems] = useItems();
@@ -41,6 +41,7 @@ const ManageItems = () => {
 
     return (
         <div className='container mx-auto d-block my-5'>
+            <Link to="/additem" className="btn btn-success fw-bold">Add Item</Link>
             <h3 className='fw-bold'>Manage All Product</h3>
             <hr />
             <Table striped bordered hover size="sm" className="text-center">

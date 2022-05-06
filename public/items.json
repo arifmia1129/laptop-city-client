@@ -46,5 +46,245 @@
         "description": "Almost all models of Walton brand are in stock. If you want update information please make sure you are logged in and try to update.",
         "quantity": 5,
         "supplier": "Walton"
+    },
+    {
+        "img": "https://i.ibb.co/nw8zf8v/laptop-1.jpg",
+        "name": "HP Brand Laptop",
+        "price": "115000",
+        "description": "Almost all models of HP brand are in stock. If you want update information please make sure you are logged in and try to update.",
+        "quantity": 50,
+        "supplier": "HP"
+    },
+    {
+        "img": "https://i.ibb.co/grNvHm2/laptop-7.jpg",
+        "name": "MacBook Brand Laptop",
+        "price": "315000",
+        "description": "Almost all models of MacBook brand are in stock. If you want update information please make sure you are logged in and try to update.",
+        "quantity": 70,
+        "supplier": "Apple"
+    },
+    {
+        "img": "https://i.ibb.co/f8wdGPk/laptop-3.jpg",
+        "name": "Samsung Brand Laptop",
+        "price": "215000",
+        "description": "Almost all models of Samsung brand are in stock. If you want update information please make sure you are logged in and try to update.",
+        "quantity": 60,
+        "supplier": "Samsung"
+    },
+    {
+        "img": "https://i.ibb.co/GPgPdFG/laptop-5.jpg",
+        "name": "Lenovo Brand Laptop",
+        "price": "150000",
+        "description": "Almost all models of Lenovo brand are in stock. If you want update information please make sure you are logged in and try to update.",
+        "quantity": 55,
+        "supplier": "Lenovo"
+    },
+    {
+        "img": "https://i.ibb.co/tZwLGvg/laptop-9.jpg",
+        "name": "Microsoft Brand Laptop",
+        "price": "215000",
+        "description": "Almost all models of Microsoft brand are in stock. If you want update information please make sure you are logged in and try to update.",
+        "quantity": 75,
+        "supplier": "Microsoft"
+    },
+    {
+        "img": "https://i.ibb.co/YTsBMyn/laptop-10.jpg",
+        "name": "Walton Brand Laptop",
+        "price": "125000",
+        "description": "Almost all models of Walton brand are in stock. If you want update information please make sure you are logged in and try to update.",
+        "quantity": 5,
+        "supplier": "Walton"
+    },
+    {
+        "img": "https://i.ibb.co/nw8zf8v/laptop-1.jpg",
+        "name": "HP Brand Laptop",
+        "price": "115000",
+        "description": "Almost all models of HP brand are in stock. If you want update information please make sure you are logged in and try to update.",
+        "quantity": 50,
+        "supplier": "HP"
+    },
+    {
+        "img": "https://i.ibb.co/grNvHm2/laptop-7.jpg",
+        "name": "MacBook Brand Laptop",
+        "price": "315000",
+        "description": "Almost all models of MacBook brand are in stock. If you want update information please make sure you are logged in and try to update.",
+        "quantity": 70,
+        "supplier": "Apple"
+    },
+    {
+        "img": "https://i.ibb.co/f8wdGPk/laptop-3.jpg",
+        "name": "Samsung Brand Laptop",
+        "price": "215000",
+        "description": "Almost all models of Samsung brand are in stock. If you want update information please make sure you are logged in and try to update.",
+        "quantity": 60,
+        "supplier": "Samsung"
+    },
+    {
+        "img": "https://i.ibb.co/GPgPdFG/laptop-5.jpg",
+        "name": "Lenovo Brand Laptop",
+        "price": "150000",
+        "description": "Almost all models of Lenovo brand are in stock. If you want update information please make sure you are logged in and try to update.",
+        "quantity": 55,
+        "supplier": "Lenovo"
+    },
+    {
+        "img": "https://i.ibb.co/tZwLGvg/laptop-9.jpg",
+        "name": "Microsoft Brand Laptop",
+        "price": "215000",
+        "description": "Almost all models of Microsoft brand are in stock. If you want update information please make sure you are logged in and try to update.",
+        "quantity": 75,
+        "supplier": "Microsoft"
+    },
+    {
+        "img": "https://i.ibb.co/YTsBMyn/laptop-10.jpg",
+        "name": "Walton Brand Laptop",
+        "price": "125000",
+        "description": "Almost all models of Walton brand are in stock. If you want update information please make sure you are logged in and try to update.",
+        "quantity": 5,
+        "supplier": "Walton"
+    },
+    {
+        "img": "https://i.ibb.co/nw8zf8v/laptop-1.jpg",
+        "name": "HP Brand Laptop",
+        "price": "115000",
+        "description": "Almost all models of HP brand are in stock. If you want update information please make sure you are logged in and try to update.",
+        "quantity": 50,
+        "supplier": "HP"
+    },
+    {
+        "img": "https://i.ibb.co/grNvHm2/laptop-7.jpg",
+        "name": "MacBook Brand Laptop",
+        "price": "315000",
+        "description": "Almost all models of MacBook brand are in stock. If you want update information please make sure you are logged in and try to update.",
+        "quantity": 70,
+        "supplier": "Apple"
+    },
+    {
+        "img": "https://i.ibb.co/f8wdGPk/laptop-3.jpg",
+        "name": "Samsung Brand Laptop",
+        "price": "215000",
+        "description": "Almost all models of Samsung brand are in stock. If you want update information please make sure you are logged in and try to update.",
+        "quantity": 60,
+        "supplier": "Samsung"
+    },
+    {
+        "img": "https://i.ibb.co/GPgPdFG/laptop-5.jpg",
+        "name": "Lenovo Brand Laptop",
+        "price": "150000",
+        "description": "Almost all models of Lenovo brand are in stock. If you want update information please make sure you are logged in and try to update.",
+        "quantity": 55,
+        "supplier": "Lenovo"
+    },
+    {
+        "img": "https://i.ibb.co/tZwLGvg/laptop-9.jpg",
+        "name": "Microsoft Brand Laptop",
+        "price": "215000",
+        "description": "Almost all models of Microsoft brand are in stock. If you want update information please make sure you are logged in and try to update.",
+        "quantity": 75,
+        "supplier": "Microsoft"
+    },
+    {
+        "img": "https://i.ibb.co/YTsBMyn/laptop-10.jpg",
+        "name": "Walton Brand Laptop",
+        "price": "125000",
+        "description": "Almost all models of Walton brand are in stock. If you want update information please make sure you are logged in and try to update.",
+        "quantity": 5,
+        "supplier": "Walton"
+    },
+    {
+        "img": "https://i.ibb.co/nw8zf8v/laptop-1.jpg",
+        "name": "HP Brand Laptop",
+        "price": "115000",
+        "description": "Almost all models of HP brand are in stock. If you want update information please make sure you are logged in and try to update.",
+        "quantity": 50,
+        "supplier": "HP"
+    },
+    {
+        "img": "https://i.ibb.co/grNvHm2/laptop-7.jpg",
+        "name": "MacBook Brand Laptop",
+        "price": "315000",
+        "description": "Almost all models of MacBook brand are in stock. If you want update information please make sure you are logged in and try to update.",
+        "quantity": 70,
+        "supplier": "Apple"
+    },
+    {
+        "img": "https://i.ibb.co/f8wdGPk/laptop-3.jpg",
+        "name": "Samsung Brand Laptop",
+        "price": "215000",
+        "description": "Almost all models of Samsung brand are in stock. If you want update information please make sure you are logged in and try to update.",
+        "quantity": 60,
+        "supplier": "Samsung"
+    },
+    {
+        "img": "https://i.ibb.co/GPgPdFG/laptop-5.jpg",
+        "name": "Lenovo Brand Laptop",
+        "price": "150000",
+        "description": "Almost all models of Lenovo brand are in stock. If you want update information please make sure you are logged in and try to update.",
+        "quantity": 55,
+        "supplier": "Lenovo"
+    },
+    {
+        "img": "https://i.ibb.co/tZwLGvg/laptop-9.jpg",
+        "name": "Microsoft Brand Laptop",
+        "price": "215000",
+        "description": "Almost all models of Microsoft brand are in stock. If you want update information please make sure you are logged in and try to update.",
+        "quantity": 75,
+        "supplier": "Microsoft"
+    },
+    {
+        "img": "https://i.ibb.co/YTsBMyn/laptop-10.jpg",
+        "name": "Walton Brand Laptop",
+        "price": "125000",
+        "description": "Almost all models of Walton brand are in stock. If you want update information please make sure you are logged in and try to update.",
+        "quantity": 5,
+        "supplier": "Walton"
+    },
+    {
+        "img": "https://i.ibb.co/nw8zf8v/laptop-1.jpg",
+        "name": "HP Brand Laptop",
+        "price": "115000",
+        "description": "Almost all models of HP brand are in stock. If you want update information please make sure you are logged in and try to update.",
+        "quantity": 50,
+        "supplier": "HP"
+    },
+    {
+        "img": "https://i.ibb.co/grNvHm2/laptop-7.jpg",
+        "name": "MacBook Brand Laptop",
+        "price": "315000",
+        "description": "Almost all models of MacBook brand are in stock. If you want update information please make sure you are logged in and try to update.",
+        "quantity": 70,
+        "supplier": "Apple"
+    },
+    {
+        "img": "https://i.ibb.co/f8wdGPk/laptop-3.jpg",
+        "name": "Samsung Brand Laptop",
+        "price": "215000",
+        "description": "Almost all models of Samsung brand are in stock. If you want update information please make sure you are logged in and try to update.",
+        "quantity": 60,
+        "supplier": "Samsung"
+    },
+    {
+        "img": "https://i.ibb.co/GPgPdFG/laptop-5.jpg",
+        "name": "Lenovo Brand Laptop",
+        "price": "150000",
+        "description": "Almost all models of Lenovo brand are in stock. If you want update information please make sure you are logged in and try to update.",
+        "quantity": 55,
+        "supplier": "Lenovo"
+    },
+    {
+        "img": "https://i.ibb.co/tZwLGvg/laptop-9.jpg",
+        "name": "Microsoft Brand Laptop",
+        "price": "215000",
+        "description": "Almost all models of Microsoft brand are in stock. If you want update information please make sure you are logged in and try to update.",
+        "quantity": 75,
+        "supplier": "Microsoft"
+    },
+    {
+        "img": "https://i.ibb.co/YTsBMyn/laptop-10.jpg",
+        "name": "Walton Brand Laptop",
+        "price": "125000",
+        "description": "Almost all models of Walton brand are in stock. If you want update information please make sure you are logged in and try to update.",
+        "quantity": 5,
+        "supplier": "Walton"
     }
 ]
