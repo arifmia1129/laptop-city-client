@@ -22,7 +22,7 @@ const RequireAuth = ({ children }) => {
 
     if (!user.emailVerified && user.providerData[0].providerId === "password") {
         return <div className='px-2'>
-            <div className='container my-5 border border-3 border-danger text-center p-3'>
+            <div className='container my-5 border border-3 border-danger text-center p-3 rounded-3'>
                 <h3 className='text-danger fw-bold'>Warning!!! Because your email address not verified.</h3>
                 <p className='text-success'>If you want verify your email please click verify email button and check your email.</p>
                 <button onClick={async () => {
