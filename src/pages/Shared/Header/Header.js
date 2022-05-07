@@ -7,7 +7,7 @@ import CustomLink from '../../CustomLink/CustomLink';
 const Header = () => {
     const [user] = useAuthState(auth);
     return (
-        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+        <Navbar collapseOnSelect expand="lg" bg="primary" variant="dark">
             <Container>
                 <Navbar.Brand as={CustomLink} to="/">Laptop-City</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
