@@ -8,6 +8,7 @@ const Chart1 = () => {
             <h3 className='fw-bold mb-3'>Products information through charts:</h3>
             <hr />
             <div>
+                {/* use pieChart for display stock quantity */}
                 <h3>Available Quantity in Stock: </h3>
                 <div className="chart d-flex justify-content-center align-items-center">
                     <PieChart width={250} height={300}>

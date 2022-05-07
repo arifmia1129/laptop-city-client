@@ -11,6 +11,7 @@ const ManageItems = () => {
     const [items, setItems] = useItems();
 
     // Modal part
+    // Use react bootstrap modal
     const [show, setShow] = useState(false);
     const [agree, setAgree] = useState(false);
     const [id, setId] = useState("");

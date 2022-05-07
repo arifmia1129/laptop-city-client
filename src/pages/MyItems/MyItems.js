@@ -12,6 +12,7 @@ const MyItems = () => {
     const navigate = useNavigate();
     useEffect(() => {
         const getItems = async () => {
+            // try to get token and send server side for verify
             try {
                 const { data } = await axios(`http://localhost:5000/myitems?email=${user?.email}`, {
                     headers: {
@@ -20,6 +21,8 @@ const MyItems = () => {
                 })
                 setMyItems(data);
             }
+
+            // catch any error sign out user
             catch (error) {
                 if (error.response.status === 401 || error.response.status === 403) {
                     signOut(auth);

@@ -6,6 +6,10 @@ import { toast, ToastContainer } from 'react-toastify';
 import auth from '../../firebase.init';
 import "./AddItem.module.css";
 const AddItem = () => {
+
+    // use react form for get data from user
+
+
     const [user] = useAuthState(auth);
 
     const { register, handleSubmit } = useForm();
@@ -30,7 +34,7 @@ const AddItem = () => {
                 <br />
                 <input {...register("name")} type="text" placeholder='Enter item name' />
                 <br />
-                <input {...register("price")} type="text" placeholder='Enter item price' />
+                <input {...register("price")} type="number" placeholder='Enter item price' />
                 <br />
                 <input {...register("description")} type="text" placeholder='Enter item description' />
                 <br />

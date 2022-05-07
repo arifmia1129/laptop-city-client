@@ -11,6 +11,7 @@ const ItemDetails = () => {
             .then(data => setItem(data));
     }, [item]);
     const handleQuantityDecrement = async () => {
+        // Apply condition so that quantity always positive
         if (item.quantity > 0) {
             const { data } = await axios.put(`http://localhost:5000/item/${id}`, { quantity: item.quantity - 1 })
             if (data.acknowledged) {

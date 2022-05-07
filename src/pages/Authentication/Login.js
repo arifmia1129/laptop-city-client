@@ -34,6 +34,8 @@ const Login = () => {
     if (loading) {
         return <Loading></Loading>
     }
+
+    // navigate when get token
     if (token) {
         navigate(from, { replace: true });
     }
