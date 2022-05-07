@@ -1,14 +1,36 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Button, Modal, Table } from 'react-bootstrap';
-import useItems from '../../hooks/useItems';
-import "./ManageItems.css";
 import axios from "axios";
 import { toast, ToastContainer } from 'react-toastify';
 import { TrashIcon } from '@heroicons/react/solid';
 import { Link } from "react-router-dom";
 
 const ManageItems = () => {
-    const [items, setItems] = useItems();
+
+    const [items, setItems] = useState([]);
+    const [page, setPage] = useState(0);
+    const [currentPage, setCurrentPage] = useState(0);
+    const [size, setSize] = useState(10);
+
+    useEffect(() => {
+        fetch(`https://rocky-caverns-30170.herokuapp.com/homepageitem?page=${currentPage}&size=${size}`)
+            .then(res => res.json())
+            .then(data => setItems(data))
+    }, [currentPage, size])
+
+    useEffect(() => {
+        fetch("https://rocky-caverns-30170.herokuapp.com/count")
+            .then(res => res.json())
+            .then(data => {
+                const itemCount = data.productCount;
+                const pages = Math.ceil(itemCount / 10);
+                setPage(pages);
+            })
+    }, [])
+
+
+
+
 
     // Modal part
     // Use react bootstrap modal
@@ -48,7 +70,6 @@ const ManageItems = () => {
             <Table striped bordered hover size="sm" className="text-center">
                 <thead>
                     <tr>
-                        <th>#</th>
                         <th>Product</th>
                         <th>Operation</th>
                     </tr>
@@ -56,7 +77,6 @@ const ManageItems = () => {
                 <tbody>
                     {
                         items.map(item => <tr key={item._id} >
-                            <td></td>
                             <td>Name: {item.name}, <br /> Quantity: {item.quantity}, <br /> Price: {item.price}, <br /> Supplier: {item.supplier}</td>
                             <td>
                                 <TrashIcon style={{ width: "50px" }} onClick={() => handleDelete(item._id)} className="btn btn-danger" />
@@ -65,7 +85,21 @@ const ManageItems = () => {
                         )
                     }
                 </tbody>
+
             </Table>
+            <div className='my-5 text-center'>
+                {
+                    [...Array(page).keys()].map(single => <button onClick={() => setCurrentPage(single)} key={single} className={currentPage === single ? "btn btn-outline-primary mx-2 currentPage" : "btn btn-outline-primary mx-2"}>{single + 1}</button>)
+                }
+
+                <select className='border border-danger text-danger rounded-3 p-1' onChange={(e) => setSize(e.target.value)} defaultValue={'DEFAULT'}>
+                    <option value="DEFAULT" disabled>Number of products</option>
+                    <option value="5">5</option>
+                    <option value="10" >10</option>
+                    <option value="15">15</option>
+                    <option value="20">20</option>
+                </select>
+            </div>
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
                     <Modal.Title className='text-danger'>Warning for delete!!!</Modal.Title>

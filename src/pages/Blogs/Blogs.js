@@ -18,17 +18,17 @@ const Blogs = () => {
                     </thead>
                     <tbody>
                         <tr  >
-                            <td></td>
+                            <td>1</td>
                             <td>JavaScript is high-level-programming language. JavaScript is a scripting language. This is known as JS.</td>
                             <td>NodeJs is a JS runtime environment. That allows the JS to run be on server-side.</td>
                         </tr>
                         <tr  >
-                            <td></td>
+                            <td>2</td>
                             <td>JS only can run in the browsers.</td>
                             <td>JS can run other side with help node js.</td>
                         </tr>
                         <tr  >
-                            <td></td>
+                            <td>3</td>
                             <td>Usually js use in client side.</td>
                             <td>Mainly node js use in server side.</td>
                         </tr>
@@ -58,26 +58,35 @@ const Blogs = () => {
             <div className='border p-2 rounded mb-5'>
                 <h4 className='fw-bold'>Question-3: Difference between SQL and NoSQL?</h4>
                 <hr />
-                <p>
-                    <span className='fw-bold'>SQL:</span>
-                    <br />
-                    1. Relational Database Management System.
-                    <br />
-                    2. These database best suited for complex queries.
-                    <br />
-                    3. Vertically scalable.
-                    <br />
-                    <span className='fw-bold'>NoSQL</span>
-                    <br />
-                    1. Non Relation Database Management System.
-                    <br />
-                    2. These database not good for complex queries.
-                    <br />
-                    3. Horizontally scalable.
-                </p>
+                <Table striped bordered hover size="sm" className="text-center">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>SQL:</th>
+                            <th>NoSQL</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr  >
+                            <td>1</td>
+                            <td>Relational Database Management System.</td>
+                            <td>Non Relation Database Management System.</td>
+                        </tr>
+                        <tr  >
+                            <td>2</td>
+                            <td>These database best suited for complex queries.</td>
+                            <td>These database not good for complex queries.</td>
+                        </tr>
+                        <tr  >
+                            <td>3</td>
+                            <td>Vertically scalable.</td>
+                            <td>Horizontally scalable.</td>
+                        </tr>
+                    </tbody>
+                </Table>
             </div>
             <div className='border p-2 rounded mb-5'>
-                <h4 className='fw-bold'>Question-4: What is purpose and how to work JWT?</h4>
+                <h4 className='fw-bold'>Question-4: What is the purpose of jwt and how does it work?</h4>
                 <hr />
                 <h5 className="fw-bold">Purpose:</h5>
                 <p>

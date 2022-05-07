@@ -74,7 +74,6 @@ const MyItems = () => {
             <Table striped bordered hover size="sm" className="text-center">
                 <thead>
                     <tr>
-                        <th>#</th>
                         <th>Product</th>
                         <th>Author</th>
                         <th>Operation</th>
@@ -83,7 +82,6 @@ const MyItems = () => {
                 <tbody>
                     {
                         myItems.map(item => <tr key={item._id} >
-                            <td></td>
                             <td>{item.name}</td>
                             <td>{user.displayName}</td>
                             <td>
