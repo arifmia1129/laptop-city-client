@@ -8,7 +8,7 @@ const Item = ({ item }) => {
     const navigate = useNavigate();
 
     const handleSingleItem = id => {
-        navigate(`item/${id}`);
+        navigate(`inventory/${id}`);
     }
     return (
         <div className="d-md-flex justify-content-between border border-5 mb-2 align-items-center p-3 rounded-3 text-center">

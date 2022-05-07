@@ -28,7 +28,7 @@ const ManageItems = () => {
 
     const handlePermanentDelete = async id => {
         setAgree(false);
-        const { data } = await axios.post(`http://localhost:5000/item/${id}`);
+        const { data } = await axios.post(`https://rocky-caverns-30170.herokuapp.com/item/${id}`);
         if (data.acknowledged) {
             const rest = items.filter(item => item._id !== id);
             setItems(rest);
@@ -57,7 +57,7 @@ const ManageItems = () => {
                     {
                         items.map(item => <tr key={item._id} >
                             <td></td>
-                            <td>{item.name}</td>
+                            <td>Name: {item.name}, <br /> Quantity: {item.quantity}, <br /> Price: {item.price}, <br /> Supplier: {item.supplier}</td>
                             <td>
                                 <TrashIcon style={{ width: "50px" }} onClick={() => handleDelete(item._id)} className="btn btn-danger" />
                             </td>

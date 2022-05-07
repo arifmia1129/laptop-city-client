@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import Item from '../Item/Item';
 import "./Items.css";
 
@@ -6,20 +7,20 @@ const Items = () => {
     const [items, setItems] = useState([]);
     const [page, setPage] = useState(0);
     const [currentPage, setCurrentPage] = useState(0);
-    const [size, setSize] = useState(10);
+    const [size, setSize] = useState(6);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/homepageitem?page=${currentPage}&size=${size}`)
+        fetch(`https://rocky-caverns-30170.herokuapp.com/homepageitem?page=${currentPage}&size=${size}`)
             .then(res => res.json())
             .then(data => setItems(data))
     }, [currentPage, size])
 
     useEffect(() => {
-        fetch("http://localhost:5000/count")
+        fetch("https://rocky-caverns-30170.herokuapp.com/count")
             .then(res => res.json())
             .then(data => {
                 const itemCount = data.productCount;
-                const pages = Math.ceil(itemCount / 10);
+                const pages = Math.ceil(itemCount / 6);
                 setPage(pages);
             })
     }, [])
@@ -34,7 +35,9 @@ const Items = () => {
                     key={item?._id}
                     item={item}
                 ></Item>)
+
             }
+            <Link style={{ textDecoration: "none" }} className='d-flex justify-content-end align-items-center' to="/manageitems"><button className='btn btn-danger'>Manage All</button></Link>
 
             <div className='my-5 text-center'>
                 {

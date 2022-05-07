@@ -6,14 +6,14 @@ const ItemDetails = () => {
     const { id } = useParams();
     const [item, setItem] = useState({});
     useEffect(() => {
-        fetch(`http://localhost:5000/item/${id}`)
+        fetch(`https://rocky-caverns-30170.herokuapp.com/item/${id}`)
             .then(res => res.json())
             .then(data => setItem(data));
     }, [item]);
     const handleQuantityDecrement = async () => {
         // Apply condition so that quantity always positive
         if (item.quantity > 0) {
-            const { data } = await axios.put(`http://localhost:5000/item/${id}`, { quantity: item.quantity - 1 })
+            const { data } = await axios.put(`https://rocky-caverns-30170.herokuapp.com/item/${id}`, { quantity: item.quantity - 1 })
             if (data.acknowledged) {
                 toast("Successfully quantity decrement!");
             }
@@ -24,7 +24,7 @@ const ItemDetails = () => {
     const handleToSubmit = async e => {
         e.preventDefault();
         const addedQuantity = e.target.quantity.value;
-        const { data } = await axios.put(`http://localhost:5000/item/${id}`, { quantity: parseInt(item.quantity) + parseInt(addedQuantity) })
+        const { data } = await axios.put(`https://rocky-caverns-30170.herokuapp.com/item/${id}`, { quantity: parseInt(item.quantity) + parseInt(addedQuantity) })
         if (data.acknowledged) {
             e.target.reset();
             toast("Successfully quantity added!")

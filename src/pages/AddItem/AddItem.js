@@ -15,7 +15,7 @@ const AddItem = () => {
     const { register, handleSubmit } = useForm();
     const onSubmit = async (data, event) => {
 
-        await axios.post("http://localhost:5000/item", { data })
+        await axios.post("https://rocky-caverns-30170.herokuapp.com/item", { data })
             .then(res => {
                 if (res.data.acknowledged === true) {
                     toast("Successfully item added.");
