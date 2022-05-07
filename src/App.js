@@ -11,6 +11,7 @@ import RequireAuth from './pages/Shared/RequireAuth/RequireAuth';
 import ManageItems from './pages/ManageItems/ManageItems';
 import AddItem from './pages/AddItem/AddItem';
 import MyItems from './pages/MyItems/MyItems';
+import Blogs from './pages/Blogs/Blogs';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home />}></Route>
+        <Route path="/blog" element={<Blogs />}></Route>
         <Route path="/item/:id" element={
           <RequireAuth>
             <ItemDetails />
