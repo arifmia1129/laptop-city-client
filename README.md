@@ -2,6 +2,8 @@
 
 Live site available now [Laptop-City](https://laptop-city-inventory.web.app/).
 
+https://laptop-city-inventory.web.app/
+
 This is a inventory management website. Its make for laptop items management.
 
 ## Features & Functionality
